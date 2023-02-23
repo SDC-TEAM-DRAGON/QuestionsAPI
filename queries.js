@@ -14,11 +14,13 @@ const pgp = require('pg-promise')(initOptions);
 
 // Database connection details;
 const cn = {
-    host: 'localhost', // 'localhost' is the default;
+    // host: '18.221.231.160', // 'localhost' is the default;
+    host: 'localhost',
     port: 5432, // 5432 is the default;
     database: 'sdc',
     user: 'postgres',
     password: '1234',
+    // timeout: 10000
 
 };
 var loaded = true;
@@ -75,9 +77,7 @@ db.query(`drop table if exists data`).then((res) => {}).then(() => {
               const values = container;
               const query = pgp.helpers.insert(values, cs);
 
-              db.any(query).then((resp) => {
-                console.log(resp);
-              });
+              db.any(query)
               container = []
             }
 
@@ -86,9 +86,7 @@ db.query(`drop table if exists data`).then((res) => {}).then(() => {
             const values = container;
             const query = pgp.helpers.insert(values, cs);
 
-            db.any(query).catch((err) => {
-              console.log(err);
-            });
+            db.any(query)
           }
 
         });
@@ -142,9 +140,7 @@ db.query(`drop table if exists data`).then((res) => {}).then(() => {
                   const values = container;
                   const query = pgp.helpers.insert(values, cs);
 
-                  db.any(query).then((resp) => {
-                    console.log(resp);
-                  });
+                  db.any(query)
                   container = []
                 }
 
@@ -203,9 +199,7 @@ db.query(`drop table if exists data`).then((res) => {}).then(() => {
                   const values = container;
                   const query = pgp.helpers.insert(values, cs);
 
-                  db.any(query).then((resp) => {
-                    console.log(resp);
-                  });
+                  db.any(query)
                   container = []
                 }
 
