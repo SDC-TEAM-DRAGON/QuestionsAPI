@@ -52,8 +52,8 @@ app.post('/qa/questions/:question_id/answers', (req, res) => {
   console.log('photos', req.body.photos);
 })
 
-app.get('/loaderio-30bbce4fa45e750cdf73c8f38b24af50.txt', (req, res)=> {
-  res.sendFile('loaderio-30bbce4fa45e750cdf73c8f38b24af50.txt', {root : '.'})
+app.get('/loaderio-5f619abe99c47a05003c4185f32390af.txt', (req, res)=> {
+  res.sendFile('loaderio-5f619abe99c47a05003c4185f32390af.txt', {root : '.'})
 })
 
 app.listen(port, () => {
