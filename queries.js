@@ -15,7 +15,7 @@ const pgp = require('pg-promise')(initOptions);
 // Database connection details;
 const cn = {
     // host: '18.221.231.160', // 'localhost' is the default;
-    host: 'localhost',
+    host: '18.220.23.177',
     port: 5432, // 5432 is the default;
     database: 'sdc',
     user: 'postgres',
